@@ -1,0 +1,17 @@
+.vis {
+  /* border: 1px solid red; */
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#users {
+  width: 33vw;
+}
+
+#posts {
+  width: 65vw;
+}
