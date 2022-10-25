@@ -5,8 +5,10 @@ async function main() {
   let users = await loadUsers();
   let posts = await loadPosts();
 
-  console.log("users: ", users);
-  console.log("posts: ", posts);
+  renderUsers(users);
+
+  // console.log("users: ", users);
+  // console.log("posts: ", posts);
 }
 
 async function loadUsers() {
@@ -29,12 +31,20 @@ async function loadPosts() {
   }
 }
 
-function renderUsers() {
-  //todo
+function renderUsers(users) {
+  const tbody = document.querySelector("tbody");
+
+  users.map((user) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${user.name}<td>`;
+    tbody.append(tr);
+    tr.addEventListener("click", () => renderPosts(user.id));
+  });
 }
 
-function renderPosts() {
+function renderPosts(userId) {
   //todo
+  console.log(userId);
 }
 
 main();
