@@ -29,4 +29,12 @@ async function loadPosts() {
   }
 }
 
+function renderUsers() {
+  //todo
+}
+
+function renderPosts() {
+  //todo
+}
+
 main();
